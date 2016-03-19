@@ -18,12 +18,16 @@ class SYS_Placeinfo extends SYS_Manager {
 
     public final function addPlaceinfo($post) {
         // エスケープ処理
-        // $Address = $this->escape($post['']);
-        // $Latitude = $this->escape($post['']);
-        // $ = $this->escape($post['']);
+        $Address = $this->escape($post['Address']);
+        $Latitude = $this->escape($post['inputLat']);
+        $Longitude = $this->escape($post['inputLng']);
+        $Name = $this->escape($post['inputName']);
+        $Summary = $this->escape($post['inputDesc']);
+        $Postalcode = $this->escape($post['Postalcode']);
+        $genre_GenreId = $this->escape($post['genre_GenreId']);
 
         // 登録処理
-        $this->genreInstance->addGenre($genreName);
+        $result = $this->placeIns->addPlaceinfo($Address, $Latitude, $Longitude, $Name, $Summary, $Postalcode, $genre_GenreId);
     }
 
     public final function removePlaceinfo($post) {
