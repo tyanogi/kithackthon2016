@@ -328,6 +328,7 @@ function deleteMarker__(x)
                                     <a href="#" class="pull-right"><button type="button" class="btn btn-danger" onclick="addMarker()">All</button></a> 
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(1)">避難所</button>
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(2)">AED</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(3)">110番</button>
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(7)">車に注意</button>
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(8)">用水に注意</button>
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(9)">踏切に注意</button>
