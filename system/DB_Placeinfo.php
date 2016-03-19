@@ -2,8 +2,7 @@
 class DB_Placeinfo extends DB_Manager {
   
     public final function addPlaceinfo($Address, $Latitude, $Longitude, $Name, $Summary, $Postalcode, $genre_GenreId) {
-        $stmt = $this->pdo->prepare("INSERT INTO placeinfo(Address, Latitude, Longitude, Name, Summary, Postalcode, genre_GenreId)
-                                                  VALUES (:Address, :Latitude, :Longitude, :Name, :Summary, :Postalcode,  :genre_GenreId)");
+        $stmt = $this->pdo->prepare("INSERT INTO placeinfo(Address, Latitude, Longitude, Name, Summary, Postalcode, genre_GenreId) VALUES (:Address, :Latitude, :Longitude, :Name, :Summary, :Postalcode,  :genre_GenreId)");
         $stmt->bindParam(':Address', $this->escape($Address), PDO::PARAM_INT);
         $stmt->bindValue(':Latitude', $this->escape($Latitude), PDO::PARAM_INT);
         $stmt->bindParam(':Longitude', $this->escape($Longitude), PDO::PARAM_INT);
