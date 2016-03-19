@@ -1,5 +1,5 @@
 <?php
-require_once('./require.php');
+//require_once('./require.php');
 
 class SYS_Placeinfo extends SYS_Manager {
 
