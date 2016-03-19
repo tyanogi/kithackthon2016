@@ -45,6 +45,7 @@ $result = $inst->getAllPlaceinfo();
         var mapObj; 
          markers = [];
          genre_markers = [];
+         flag_group = [];
 
        google.maps.event.addDomListener(window, 'load', function()
        {
@@ -90,11 +91,13 @@ $result = $inst->getAllPlaceinfo();
              var i, j, len, place, icon;
              markers = [];
              genre_markers = [];
+             flag_group = [];
             var infoWindows = [];
             for (i = j = 0, len = places.length; j < len; i = ++j) {
               place = places[i];
               console.log(places[i]);
               genre_markers[i] = place.genre_GenreId;
+              flag_group[i] = 1;
               icon = {
                 url: "./image/icons/"+ place.genre_GenreId + ".png",
                 scaledSize : new google.maps.Size(24, 24)
@@ -174,8 +177,13 @@ $result = $inst->getAllPlaceinfo();
 function deleteMarker__(x)
         {
             for(tmp = 0;tmp<markers.length;tmp++){
-              if(genre_markers[tmp] == x)
-            markers[tmp].setVisible(true);
+              flag_group[tmp] = 1 - flag_group[tmp];
+              if(genre_markers[tmp] == x && flag_group[tmp] == 1){
+                markers[tmp].setVisible(true);
+              }
+              else if(genre_markers[tmp] == x && flag_group[tmp] == 0){
+                markers[tmp].setVisible(false);
+              }
             } 
         }
 
