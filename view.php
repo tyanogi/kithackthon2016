@@ -215,7 +215,7 @@ function deleteMarker__(x)
                 
                 <!-- top nav -->
                 <div class="navbar navbar-blue navbar-static-top">  
-                    <div class="navbar-header">
+<!--                    <div class="navbar-header">
                       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle</span>
                         <span class="icon-bar"></span>
@@ -257,7 +257,7 @@ function deleteMarker__(x)
                       </li>
                     </ul>
                     </nav>
-                </div>
+-->                </div>
                 <!-- /top nav -->
 
                 <div class="padding">
@@ -318,8 +318,8 @@ function deleteMarker__(x)
                           <div class="col-sm-12">
                                <div class="panel panel-default">
                                  <div class="panel-heading">
-                                    <a href="#" class="pull-right">View all</a> 
-                                    <h4>表示させたい項目を選択しよう！！ &amp; Choose the selection!!</h4>
+ <!--                                   <a href="#" class="pull-right">View all</a> 
+ -->                                   <h4>表示させたい項目を選択しよう！！</h4>
                                  </div>
 
                     
