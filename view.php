@@ -44,6 +44,7 @@ $result = $inst->getAllPlaceinfo();
         var markerObj; 
         var mapObj; 
          markers = [];
+         genre_markers = [];
 
        google.maps.event.addDomListener(window, 'load', function()
        {
@@ -88,11 +89,12 @@ $result = $inst->getAllPlaceinfo();
             // dbのデータからマーカーを落とす
              var i, j, len, place, icon;
              markers = [];
+             genre_markers = [];
             var infoWindows = [];
             for (i = j = 0, len = places.length; j < len; i = ++j) {
               place = places[i];
               console.log(places[i]);
-
+              genre_markers[i] = place.genre_GenreId;
               icon = {
                 url: "./image/icons/"+ place.genre_GenreId + ".png",
                 scaledSize : new google.maps.Size(24, 24)
@@ -157,6 +159,7 @@ $result = $inst->getAllPlaceinfo();
             console.log(markers[0]);
             for(tmp = 0;tmp<markers.length;tmp++){
             markers[tmp].setVisible(false);
+            console.log(genre_markers[tmp]);
             } 
         } 
  
@@ -167,6 +170,15 @@ $result = $inst->getAllPlaceinfo();
             markers[tmp].setVisible(true);
             } 
         } 
+
+function deleteMarker__(x)
+        {
+            for(tmp = 0;tmp<markers.length;tmp++){
+              if(genre_markers[tmp] == x)
+            markers[tmp].setVisible(true);
+            } 
+        }
+
 
    </script>
   </head>
@@ -319,14 +331,15 @@ $result = $inst->getAllPlaceinfo();
 
                     
                                   <div class="panel-body">
-                                  <a href="#" class="pull-right"><button type="button" class="btn btn-danger"  onclick="deleteMarker()" >Cear</button></a>
+                                  <a href="#" class="pull-right"><button type="button" class="btn btn-danger"  onclick="deleteMarker()" >Clear</button></a>
                                     <a href="#" class="pull-right"><button type="button" class="btn btn-danger" onclick="addMarker()">All</button></a> 
-                                    <button type="button" class="btn btn-primary" data-toggle="button">Danger</button>
-                                    <button type="button" class="btn btn-danger">Danger</button>
-                                    <button type="button" class="btn btn-danger">Danger</button>
-                                    <button type="button" class="btn btn-danger">Danger</button>
-                                    <button type="button" class="btn btn-danger">Danger</button>
-                                    <button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(1)">group1</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(2)">group2</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(3)">group3</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(4)">group4</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(5)">group5</button>
+
+
                                     <div id="gmap" style="width: 100%; height: 500px; border: 1px solid Gray;">
                                   </div>
                                </div>
