@@ -117,16 +117,16 @@
                                        <label for="inputName">場所の名前</label>
                                        <input type="text" name="name" class="form-control" id="inputName" placeholder="例）四十万小学校" required="required"></input>
                                      </div>
-
+<!--
                                      <div class="form-group" style="padding: 0 24px;">
-                                       <label for="inputLat">緯度</label>
-                                       <input type="number" step="0.000001" name="latitude" class="form-control" id="inputLat" required="required"></input>
-                                       <p class="help-block red">※緯度と経度の入力はマップをクリックして下さい</p>
-                                     </div>
-                                     <div class="form-group" style="padding: 0 24px;">
-                                       <label for="inputLng">経度</label>
-                                       <input type="number" step="0.000001" name="longitude" class="form-control" id="inputLng" required="required"></input>
-                                     </div>
+                                       <label for="inputLat">緯度</label> -->
+                                       <input type="hidden" name="latitude" class="form-control" id="inputLat"></input>
+<!--                                        <p class="help-block red">※緯度と経度の入力はマップをクリックして下さい</p> -->
+                                     <!-- </div> -->
+                                     <!-- <div class="form-group" style="padding: 0 24px;">
+                                       <label for="inputLng">経度</label> -->
+                                       <input type="hidden" name="longitude" class="form-control" id="inputLng"></input>
+                                     <!-- </div> -->
                                      <div class="form-group" style="padding: 0 24px;">
                                        <label for="inputDisc">概要</label>
                                         <textarea name="description" class="form-control" id="inputDesc" rows="3" placeholder="例) 車通りが多く交通事故が発生しやすい"></textarea>
@@ -142,10 +142,21 @@
                                          <option>見通しが悪い</option>
                                        </select>
                                      </div>
-                                    <button class="btn btn-primary pull-right" type="submit">この場所を登録する！</button>
+                                     <p class="help-block red">※ 『場所の名前』 の入力と地図上のクリックは必須です</p>
+                                     <p class="help-block red">　　この二つが入力されないと登録ボタンが押せません</p>
+                                    <button class="btn btn-primary pull-right disabled" id="new-place-btn" type="submit"><div id="sense_hover">この場所を登録する！</div></button>
                                     <ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
                                   </form>
                               </div>
+<!-- 
+                              <div class="panel panel-danger" id="warning">
+                                <div class="panel-heading">
+                                  <h3 class="panel-title">未入力事項があります</h3>
+                                </div>
+                                <div class="panel-body">
+    　　　　　　　　　　　　　　　　　　　　　　　　　　
+  　　　　　　　　　　　　　　　　　　　　　　　　　</div>
+                              </div> -->
 
                           </div>
 
