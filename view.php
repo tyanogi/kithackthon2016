@@ -341,12 +341,13 @@ function deleteMarker__(x)
                                   <div class="panel-body">
                                   <a href="#" class="pull-right"><button type="button" class="btn btn-danger"  onclick="deleteMarker()" >Clear</button></a>
                                     <a href="#" class="pull-right"><button type="button" class="btn btn-danger" onclick="addMarker()">All</button></a> 
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(1)">group1</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(2)">group2</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(3)">group3</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(4)">group4</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(5)">group5</button>
-
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(1)">避難所</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(2)">AED</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(7)">車に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(8)">用水に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(9)">踏切に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(10)">夜道に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(11)">見通しが悪い</button>
 
                                     <div id="gmap" style="width: 100%; height: 500px; border: 1px solid Gray;">
                                   </div>
