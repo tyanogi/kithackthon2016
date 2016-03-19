@@ -18,6 +18,7 @@ switch($requestType) {
     case 'placeinfo':
         $inst = new SYS_Placeinfo();
         $inst->addPlaceinfo($_POST);
+        header( "Location: ../new.php" );
     // フロントの設定
     case 'admin_edit_basic':
         $authInstance->typeCheck(array(10));
