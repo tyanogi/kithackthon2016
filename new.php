@@ -1,5 +1,15 @@
 <?php
+
 require_once('./system/require.php');
+
+function funcOptionLoop() {
+   $genreIns = new SYS_Genre();
+   $genreResult = $genreIns->getAllGenre();
+
+   foreach ($genreResult as $k => $v) {
+      echo "<option value=\"{$k}\">{$v['GenreMain']}</option>\n";
+   }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,11 +102,14 @@ require_once('./system/require.php');
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
                         <ul class="dropdown-menu">
+<?php ?>
+<!--
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
+-->
                         </ul>
                       </li>
                     </ul>
@@ -139,11 +152,14 @@ require_once('./system/require.php');
                                      <div class="form-group" style="padding: 0 24px;">
                                        <label for="genreSelect">ジャンル</label>
                                        <select class="form-control" id="genreSelect" name="genre">
+<?php funcOptionLoop(); ?>
+<!--
                                          <option>車に注意</option>
                                          <option>用水に注意</option>
                                          <option>踏切注意</option>
                                          <option>夜道注意</option>
                                          <option>見通しが悪い</option>
+-->
                                        </select>
                                      </div>
                                      <p class="help-block">※ 『場所の名前』 の入力と地図上のクリックは必須です</p>
@@ -166,7 +182,7 @@ require_once('./system/require.php');
                           <!-- main col right -->
                           <div class="col-sm-7">
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><button type="button" class="btn btn-success pull-right" id="set-loc-here">現在地を指定する</button><h4 class="bold">追加する場所をクリック!</h4></div>
+                                 <div class="panel-heading"><button type="button" class="btn btn-success pull-right">現在地を指定する</button><h4 class="bold">追加する場所をクリック!</h4></div>
                                   <div class="panel-body">
                                     <div id="gmap" style="width: 100%; height: 400px; border: 1px solid Gray;">
                                   </div>
