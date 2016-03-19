@@ -137,22 +137,7 @@ $result = $inst->getAllPlaceinfo();
 
 
 
-           // マーカーを作成
-           var marker = new google.maps.Marker({
-               position: latlng,
-               map: mapObj,
-               icon: markerImg,
-               title: '富士山'
-           });            // クリックした場所にマーカーを追加
-           google.maps.event.addListener(mapObj, 'click', function(e)
-           {
-               markerObj = new google.maps.Marker({
-                   position: e.latLng,
-                   map: mapObj,
-                   icon: markerImg,
-               title: '富士山'
-               });
-                           })        });
+        });
 
 
 
