@@ -1,0 +1,20 @@
+span:before {
+  content: "\A";
+  white-space: pre;
+}
+
+.notice {
+  width: 100%;
+  min-height: 70px;
+}
+
+#printarea {
+  height: 80%;
+  max-width: 800px
+}
+
+@media print {
+      .rm-print {
+          display: none;
+      }
+  }
