@@ -1,3 +1,6 @@
+<?php
+//require_once('./system/require.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -111,7 +114,8 @@
                          <div class="col-sm-5">
 
                               <div class="well">
-                                   <form class="form-horizontal" role="form">
+                                   <form method="POST" class="form-horizontal" action="./system/request.php" role="form">
+<input type="hidden" name="requestType" value="placeinfo">
                                     <h4>新しい危険個所を追加</h4>
                                      <div class="form-group" style="padding: 0 24px;">
                                        <label for="inputName">場所の名前</label>
