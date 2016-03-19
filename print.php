@@ -192,6 +192,6 @@ $result = $inst->getAllPlaceinfo();
       <span>印刷プレビューで地図が正しく印刷されることを確認してから印刷することをお勧めします。</span>
     </div>
     <div id="printarea"><div id="gmap" style="width: 100%; height: 100%; border: 1px solid Gray;"></div></div>
-    <a href="./view.php">トップに戻る</a>
+    <div　class="rm-print"><a href="./view.php"　class="rm-print">トップに戻る</a></div>
   </body>
 </html>
