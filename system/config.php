@@ -8,8 +8,8 @@
 
 /* Local Environment */
 define('DB_HOST', 'localhost');
-define('DB_NAME', '');
-define('DB_USER', '');
+define('DB_NAME', 'kit_hackason');
+define('DB_USER', 'root');
 define('DB_PW', '');
 
 ?>

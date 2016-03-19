@@ -1,6 +1,6 @@
 <?php
 
-require_once('./require.php');
+//require_once('./require.php');
 
 // POSTの受け取り
 $requestType = htmlspecialchars($_POST['requestType'], ENT_QUOTES, 'UTF-8');
