@@ -142,8 +142,7 @@
                                          <option>見通しが悪い</option>
                                        </select>
                                      </div>
-                                     <p class="help-block red">※ 『場所の名前』 の入力と地図上のクリックは必須です</p>
-                                     <p class="help-block red">　　この二つが入力されないと登録ボタンが押せません</p>
+                                     <p class="help-block">※ 『場所の名前』 の入力と地図上のクリックは必須です</p>
                                     <button class="btn btn-primary pull-right disabled" id="new-place-btn" type="submit"><div id="sense_hover">この場所を登録する！</div></button>
                                     <ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
                                   </form>
