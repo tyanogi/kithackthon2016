@@ -4,7 +4,7 @@
    <title>Google Maps V3</title>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-   <script type="text/javascript" src="/dashboard/javascripts/index.js"></script>
+   <script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
    <div id="gmap" style="width: 500px; height: 370px; border: 1px solid Gray;">
@@ -218,7 +218,7 @@
                           </div>
                           <div class="col-sm-6">
                             <p>
-                            <a href="#" class="pull-right">©Copyright 2013</a>
+                            <a href="#" class="pull-right">cCopyright 2013</a>
                             </p>
                           </div>
                         </div>
