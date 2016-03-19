@@ -17,23 +17,23 @@
            var markerObj = new google.maps.Marker({});
            google.maps.event.addListener(mapObj, 'click', function(e)
            {
-              $("#inputLat").val(e.latLng.lat().toFixed(6));
-              $("#inputLng").val(e.latLng.lng().toFixed(6)).trigger('change');
-
-               markerObj.setMap(null);
-               markerObj = new google.maps.Marker({
-                   position: e.latLng,
-                   map: mapObj,
-                   animation: google.maps.Animation.DROP,
-               });
+  　　　　　　　　　drop_marker_and_set(e.latLng);
            });
 
            // 現在地を指定するボタンが押されたら現在地を取得する
            $("#set-loc-here").click(function(event) {
              if (navigator.geolocation) {
-
-             };
-           });
+                navigator.geolocation.getCurrentPosition(function(position) {
+                  center = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                  mapObj.panTo(center);
+                  drop_marker_and_set(center);
+                });
+              } else {
+                center = new google.maps.LatLng(36.503212, 136.617477);
+                mapObj.panTo(center);
+                drop_marker_and_set(center);
+              };
+          });
 
            // formの入力状況に応じてsubmitボタンを無効化・有効化する
            $(".form-control").change(function(event) {
@@ -58,4 +58,20 @@
               }
             }
           });
+
+      // 指定された場所にマーカを設置し、緯度経度を設定する
+      function drop_marker_and_set(center) {
+        console.log(center.lat());
+        console.log(center.lng());
+        $("#inputLat").val(center.lat().toFixed(6));
+        $("#inputLng").val(center.lng().toFixed(6)).trigger('change');
+
+        markerObj.setMap(null);
+        markerObj = new google.maps.Marker({
+          position: center,
+          map: mapObj,
+          animation: google.maps.Animation.DROP,
+        });
+      }
       });
+
