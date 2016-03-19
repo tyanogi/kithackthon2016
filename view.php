@@ -359,8 +359,8 @@ function deleteMarker__(x)
                                 </div>
                                 <div class="panel-body">
     　　　　　　　　　　　　　　　　　　　　　　　　　 <ul class="list-inline">
-                                     <li class="icon-desc"><img src="./image/icons/1.png" width="38px" height="38px"><span class="desc">AED</span></li>
-                                     <li class="icon-desc"><img src="./image/icons/2.png" width="38px" height="38px"><span class="desc">避難所</span></li>
+                                     <li class="icon-desc"><img src="./image/icons/2.png" width="38px" height="38px"><span class="desc">AED</span></li>
+                                     <li class="icon-desc"><img src="./image/icons/1.png" width="38px" height="38px"><span class="desc">避難所</span></li>
                                      <li class="icon-desc"><img src="./image/icons/3.png" width="38px" height="38px"><span class="desc">110番の家</span></li>
                                      <li class="icon-desc"><img src="./image/icons/7.png" width="38px" height="38px"><span class="desc">車に注意</span></li>
                                      <li class="icon-desc"><img src="./image/icons/8.png" width="38px" height="38px"><span class="desc">用水に注意</span></li>
