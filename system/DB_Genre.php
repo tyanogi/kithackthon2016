@@ -3,8 +3,9 @@
 class DB_Genre extends DB_Manager {
 
     public final function addGenre($genreMain, $genreSub) {
-        $stmt = $this->pdo->prepare("INSERT INTO Genre(genreMain, genreSub) VALUES (:genreMain, :genreSub)");
-        #$stmt->bindParam(':genreName', $this->escape($genreName), PDO::PARAM_STR);
+        $stmt = $this->pdo->prepare("INSERT INTO genre(genreMain, genreSub) VALUES (:genreMain, :genreSub)");
+        $stmt->bindParam(':genreMain', $this->escape($genreMain), PDO::PARAM_STR);
+        $stmt->bindParam(':genreSub', $this->escape($genreSub), PDO::PARAM_STR);
         $stmt->execute();
     }
 
