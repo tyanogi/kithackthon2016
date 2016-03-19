@@ -40,6 +40,11 @@ $result = $inst->getAllPlaceinfo();
 
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
    <script type="text/javascript">
+
+        var markerObj; 
+        var mapObj; 
+         markers = [];
+
        google.maps.event.addDomListener(window, 'load', function()
        {
            window.openedWindow = null
@@ -81,8 +86,8 @@ $result = $inst->getAllPlaceinfo();
 //           ];
 
             // dbのデータからマーカーを落とす
-            var i, j, len, place, icon;
-            var markers = [];
+             var i, j, len, place, icon;
+             markers = [];
             var infoWindows = [];
             for (i = j = 0, len = places.length; j < len; i = ++j) {
               place = places[i];
@@ -95,7 +100,8 @@ $result = $inst->getAllPlaceinfo();
               markers[i] = new google.maps.Marker({
                 position: new google.maps.LatLng(place.Latitude, place.Longitude),
                 map: mapObj,
-                icon: icon
+                icon: icon,
+                visible: true
               });
 
 　　　　　　　　　　　 // GoogleMapの情報ウィンドウに表示するコンテンツ
@@ -144,6 +150,23 @@ $result = $inst->getAllPlaceinfo();
                            })        });
 
 
+
+        // 地図からマーカーを削除 
+        function deleteMarker() 
+        { 
+            console.log(markers[0]);
+            for(tmp = 0;tmp<markers.length;tmp++){
+            markers[tmp].setVisible(false);
+            } 
+        } 
+ 
+        // 地図のマーカーを追加 
+        function addMarker() 
+        { 
+            for(tmp = 0;tmp<markers.length;tmp++){
+            markers[tmp].setVisible(true);
+            } 
+        } 
 
    </script>
   </head>
@@ -291,11 +314,19 @@ $result = $inst->getAllPlaceinfo();
                                <div class="panel panel-default">
                                  <div class="panel-heading">
                                     <a href="#" class="pull-right">View all</a> 
-                                    <h4>Let's look up places &amp; Create new Location!!</h4>
+                                    <h4>表示させたい項目を選択しよう！！ &amp; Choose the selection!!</h4>
                                  </div>
 
-                                 
+                    
                                   <div class="panel-body">
+                                  <a href="#" class="pull-right"><button type="button" class="btn btn-danger"  onclick="deleteMarker()" >Cear</button></a>
+                                    <a href="#" class="pull-right"><button type="button" class="btn btn-danger" onclick="addMarker()">All</button></a> 
+                                    <button type="button" class="btn btn-primary" data-toggle="button">Danger</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
                                     <div id="gmap" style="width: 100%; height: 500px; border: 1px solid Gray;">
                                   </div>
                                </div>
