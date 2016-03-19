@@ -56,7 +56,7 @@
                    icon: markerImg, 
                title: '四十万小学校'
                });
-               ajaxPostFunc(e.latLng.lat(), e.latLng.lat());
+               ajaxPostFunc(e.latLng.lat(), e.latLng.lng());
 
            })
        });
