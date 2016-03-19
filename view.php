@@ -329,11 +329,11 @@ function deleteMarker__(x)
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(1)">避難所</button>
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(2)">AED</button>
 <button type="button" class="btn btn-danger" onclick="deleteMarker__(3)">110番</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(7)">車に注意</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(8)">用水に注意</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(9)">踏切に注意</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(10)">夜道に注意</button>
-<button type="button" class="btn btn-danger" onclick="deleteMarker__(11)">見通しが悪い</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(4)">車に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(5)">用水に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(6)">踏切に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(7)">夜道に注意</button>
+<button type="button" class="btn btn-danger" onclick="deleteMarker__(8)">見通しが悪い</button>
 
                                     <div id="gmap" style="width: 100%; height: 500px; border: 1px solid Gray;">
                                   </div>
