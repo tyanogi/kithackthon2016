@@ -8,8 +8,8 @@
 
 /* Local Environment */
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'kitsec_ctf');
-define('DB_USER', 'root');
-define('DB_PW', 'pskine0802');
+define('DB_NAME', '');
+define('DB_USER', '');
+define('DB_PW', '');
 
 ?>
