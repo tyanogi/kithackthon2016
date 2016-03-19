@@ -25,6 +25,7 @@
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/view.css" rel="stylesheet">
 <?php
 
 require_once('./system/require.php');
@@ -85,6 +86,7 @@ $result = $inst->getAllPlaceinfo();
             var infoWindows = [];
             for (i = j = 0, len = places.length; j < len; i = ++j) {
               place = places[i];
+              console.log(places[i]);
 
               icon = {
                 url: "./image/icons/"+ place.genre_GenreId + ".png",
@@ -97,8 +99,10 @@ $result = $inst->getAllPlaceinfo();
               });
 
 　　　　　　　　　　　 // GoogleMapの情報ウィンドウに表示するコンテンツ
-              // TODO: 表示するコンテンツについて吟味
-              content ='<div class="place_name">' + place.name + '</div>';
+              content ='<div class="info"><div class="place_name">' + place.Name + '</div>' +
+                       '<div class="postcode">〒 ' + place.Postalcode + '</div>' +
+                       '<div class="address">住所: ' + place.Address + '</div>' +
+                       '<div class="info">情報: ' + place.Summary + '</div>' +  '</div>';
 
               infoWindows[i] = new google.maps.InfoWindow({
                 content: content,

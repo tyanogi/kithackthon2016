@@ -1,0 +1,9 @@
+.info {
+  width: 254px;
+}
+
+.place_name {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+}
