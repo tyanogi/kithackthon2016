@@ -28,6 +28,14 @@
                });
            });
 
+           // 現在地を指定するボタンが押されたら現在地を取得する
+           $("#set-loc-here").click(function(event) {
+             if (navigator.geolocation) {
+
+             };
+           });
+
+           // formの入力状況に応じてsubmitボタンを無効化・有効化する
            $(".form-control").change(function(event) {
              console.log($("#inputLng").val());
              console.log($("#inputName").val());
