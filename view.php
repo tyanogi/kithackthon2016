@@ -235,14 +235,14 @@ $result = $inst->getAllPlaceinfo();
                         <div class="row">
 
                          <!-- main col left -->
-                         <div class="col-sm-5">
+<!--                         <div class="col-sm-5">
 
                               <div class="well">
                                    <form class="form-horizontal" role="form">
                                     <h4>New location</h4>
                                      <div class="form-group" style="padding: 0 24px;">
-                                      <!-- <textarea class="form-control" placeholder="Name"></textarea> -->
-                                      <input type="text" name="name" class="form-control" placeholder="Name"></input>
+-->                                      <!-- <textarea class="form-control" placeholder="Name"></textarea> -->
+<!--                                      <input type="text" name="name" class="form-control" placeholder="Name"></input>
                                     </div>
                                     <div class="form-group" style="padding: 0 24px;">
                                       <input type="text" name="name" class="form-control" placeholder="Something..."></input>
@@ -261,7 +261,7 @@ $result = $inst->getAllPlaceinfo();
                                     <button class="btn btn-primary pull-right" type="button">New Location</button><ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
                                   </form>
                               </div>
-
+-->
                               <!-- <div class="panel panel-default">
                                  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>More Templates</h4></div>
                                   <div class="panel-body">
@@ -273,7 +273,7 @@ $result = $inst->getAllPlaceinfo();
                                   </div>
                               </div> -->
 
-                              <div class="panel panel-default">
+<!--                              <div class="panel panel-default">
                                 <div class="panel-heading"><h4>What Is Bootstrap?</h4></div>
                                 <div class="panel-body">
                                   Bootstrap is front end frameworkto build custom web applications that are fast, responsive &amp; intuitive. It consist of CSS and HTML for typography, forms, buttons, tables, grids, and navigation along with custom-built jQuery plug-ins and support for responsive layouts. With dozens of reusable components for navigation, pagination, labels, alerts etc..                          </div>
@@ -281,13 +281,18 @@ $result = $inst->getAllPlaceinfo();
 
 
                           </div>
-
+-->
                           <!-- main col right -->
-                          <div class="col-sm-7">
+                          <div class="col-sm-12">
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Let's look up places &amp; Create new Location!!</h4></div>
+                                 <div class="panel-heading">
+                                    <a href="#" class="pull-right">View all</a> 
+                                    <h4>Let's look up places &amp; Create new Location!!</h4>
+                                 </div>
+
+                                 
                                   <div class="panel-body">
-                                    <div id="gmap" style="width: 100%; height: 380px; border: 1px solid Gray;">
+                                    <div id="gmap" style="width: 100%; height: 500px; border: 1px solid Gray;">
                                   </div>
                                </div>
                                </div>
