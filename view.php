@@ -167,7 +167,7 @@ $result = $inst->getAllPlaceinfo();
                 </ul>
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer">
                     <li>
-                      <a href="http://www.bootply.com"><h3>Bootstrap</h3> <i class="glyphicon glyphicon-heart-empty"></i> Bootply</a>
+                      <a href="http://www.bootply.com"><h3>SecureMap</h3> <i class="glyphicon glyphicon-heart-empty"></i>AGITO</a>
                     </li>
                 </ul>
 

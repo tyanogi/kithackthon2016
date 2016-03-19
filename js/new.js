@@ -22,6 +22,7 @@
 
            // 現在地を指定するボタンが押されたら現在地を取得する
            $("#set-loc-here").click(function(event) {
+            console.log("hogehoge");
              if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                   center = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);

@@ -50,7 +50,7 @@ function funcOptionLoop() {
                 </ul>
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer">
                     <li>
-                      <a href="http://www.bootply.com"><h3>Bootstrap</h3> <i class="glyphicon glyphicon-heart-empty"></i> Bootply</a>
+                      <a href="http://www.bootply.com"><h3>SecureMap</h3> <i class="glyphicon glyphicon-heart-empty"></i> AGITO</a>
                     </li>
                 </ul>
 
@@ -183,7 +183,7 @@ function funcOptionLoop() {
                           <!-- main col right -->
                           <div class="col-sm-7">
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><button type="button" class="btn btn-success pull-right">現在地を指定する</button><h4 class="bold">追加する場所をクリック!</h4></div>
+                                 <div class="panel-heading"><button type="button" class="btn btn-success pull-right" id="set-loc-here">現在地を指定する</button><h4 class="bold">追加する場所をクリック!</h4></div>
                                   <div class="panel-body">
                                     <div id="gmap" style="width: 100%; height: 400px; border: 1px solid Gray;">
                                   </div>
