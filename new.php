@@ -43,10 +43,9 @@ function funcOptionLoop() {
               </ul>
 
                 <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> Featured</a></li>
-                    <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Stories</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Saved</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
+                    <li class="active"><a href="./view.php"><i class="glyphicon glyphicon-list-alt"></i>　すべての場所を見る</a></li>
+                    <li><a href="./new.php"><i class="glyphicon glyphicon-plus"></i>　あたらしい場所を追加する</a></li>
+                    <li><a href="./print.php"><i class="glyphicon glyphicon-print"></i>　印刷する</a></li>
                 </ul>
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer">
                     <li>
@@ -56,10 +55,10 @@ function funcOptionLoop() {
 
                 <!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
-                    <li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
-                    <li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
-                    <li><a href="#" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
-                    <li><a href="#" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a></li>
+                    <li><a href="./view.php" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+                    <li><a href="./new.php" class="text-center"><i class="glyphicon glyphicon-plus"></i></a></li>
+                    <li><a href="./print.php" class="text-center"><i class="glyphicon glyphicon-print"></i></a></li>
+                    <!-- <li><a href="#" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a></li> -->
                 </ul>
               
             </div>
