@@ -7,7 +7,8 @@ function funcOptionLoop() {
    $genreResult = $genreIns->getAllGenre();
 
    foreach ($genreResult as $k => $v) {
-      echo "<option value=\"{$k}\">{$v['GenreMain']}</option>\n";
+      $num = $k+1;
+      echo "<option value=\"{$num}\">{$v['GenreMain']}</option>\n";
    }
 }
 ?>
