@@ -69,7 +69,7 @@ function funcOptionLoop() {
                 
                 <!-- top nav -->
                 <div class="navbar navbar-blue navbar-static-top">  
-                    <div class="navbar-header">
+<!--                    <div class="navbar-header">
                       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle</span>
                         <span class="icon-bar"></span>
@@ -103,18 +103,18 @@ function funcOptionLoop() {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
                         <ul class="dropdown-menu">
 <?php ?>
-<!--
+
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
                           <li><a href="">More</a></li>
--->
+
                         </ul>
                       </li>
                     </ul>
                     </nav>
-                </div>
+-->                </div>
                 <!-- /top nav -->
 
                 <div class="padding">
