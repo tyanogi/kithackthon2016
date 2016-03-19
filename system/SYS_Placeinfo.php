@@ -1,4 +1,5 @@
 <?php
+require_once('./require.php');
 
 class SYS_Placeinfo extends SYS_Manager {
 
@@ -19,12 +20,15 @@ class SYS_Placeinfo extends SYS_Manager {
     public final function addPlaceinfo($post) {
         // エスケープ処理
         $Address = $this->escape($post['Address']);
-        $Latitude = $this->escape($post['inputLat']);
-        $Longitude = $this->escape($post['inputLng']);
-        $Name = $this->escape($post['inputName']);
-        $Summary = $this->escape($post['inputDesc']);
+        $Latitude = $this->escape($post['latitude']);
+        $Longitude = $this->escape($post['longitude']);
+        $Name = $this->escape($post['name']);
+        $Summary = $this->escape($post['description']);
         $Postalcode = $this->escape($post['Postalcode']);
-        $genre_GenreId = $this->escape($post['genre_GenreId']);
+        $genre_GenreId = $this->escape($post['genre']);
+
+        echo "debug :";
+        print_r($post);
 
         // 登録処理
         $result = $this->placeIns->addPlaceinfo($Address, $Latitude, $Longitude, $Name, $Summary, $Postalcode, $genre_GenreId);
