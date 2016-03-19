@@ -7,3 +7,22 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.icon-desc {
+    float: left;
+    width: 25%;
+    height: 115px;
+    padding: 10px;
+    padding-top: 25px;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #fff;
+}
+.desc {
+  display: block;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 14px;
+}

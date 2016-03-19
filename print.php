@@ -165,16 +165,16 @@ $result = $inst->getAllPlaceinfo();
             console.log(markers[0]);
             for(tmp = 0;tmp<markers.length;tmp++){
             markers[tmp].setVisible(false);
-            } 
-        } 
- 
-        // 地図のマーカーを追加 
-        function addMarker() 
-        { 
+            }
+        }
+
+        // 地図のマーカーを追加
+        function addMarker()
+        {
             for(tmp = 0;tmp<markers.length;tmp++){
             markers[tmp].setVisible(true);
-            } 
-        } 
+            }
+        }
 
         $(document).on('click','.print-preview',function(){
           doPrintPreview();
