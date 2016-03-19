@@ -45,7 +45,7 @@
               place = places[i];
 
               icon = {
-                url: "/dashboard/images/icons/"+ place.genre_id + ".png",
+                url: "./image/icons/"+ place.genre_id + ".png",
                 scaledSize : new google.maps.Size(24, 24)
               };
               markers[i] = new google.maps.Marker({

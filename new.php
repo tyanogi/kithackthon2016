@@ -1,17 +1,3 @@
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-   <title>Google Maps V3</title>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-   <script type="text/javascript" src="./js/index.js"></script>
-</head>
-<body>
-   <div id="gmap" style="width: 500px; height: 370px; border: 1px solid Gray;">
-   </div>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,8 +11,10 @@
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/new.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-   <script type="text/javascript" src="./js/index.js"></script>
+   <script type="text/javascript" src="./js/new.js"></script>
   </head>
   <body>
 <div class="wrapper">
@@ -124,93 +112,66 @@
 
                               <div class="well">
                                    <form class="form-horizontal" role="form">
-                                    <h4>New location</h4>
+                                    <h4>新しい危険個所を追加</h4>
                                      <div class="form-group" style="padding: 0 24px;">
-                                      <!-- <textarea class="form-control" placeholder="Name"></textarea> -->
-                                      <input type="text" name="name" class="form-control" placeholder="Name"></input>
-                                    </div>
-                                    <div class="form-group" style="padding: 0 24px;">
-                                      <input type="text" name="name" class="form-control" placeholder="Something..."></input>
-                                    </div>
-                                    <fieldset class="form-group" style="padding: 0 24px;">
-                                      <label for="exampleSelect1">Category</label>
-                                      <select class="form-control" id="exampleSelect1">
-                                        <option>車に注意</option>
-                                        <option>用水に注意</option>
-                                        <option>踏切注意</option>
-                                        <option>夜道注意</option>
-                                        <option>見通しが悪い</option>
-                                        <option>などなど適当</option>
-                                      </select>
-                                    </fieldset>
-                                    <button class="btn btn-primary pull-right" type="submit">New Location</button><ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+                                       <label for="inputName">場所の名前</label>
+                                       <input type="text" name="name" class="form-control" id="inputName" placeholder="例）四十万小学校" required="required"></input>
+                                     </div>
+<!--
+                                     <div class="form-group" style="padding: 0 24px;">
+                                       <label for="inputLat">緯度</label> -->
+                                       <input type="hidden" name="latitude" class="form-control" id="inputLat"></input>
+<!--                                        <p class="help-block red">※緯度と経度の入力はマップをクリックして下さい</p> -->
+                                     <!-- </div> -->
+                                     <!-- <div class="form-group" style="padding: 0 24px;">
+                                       <label for="inputLng">経度</label> -->
+                                       <input type="hidden" name="longitude" class="form-control" id="inputLng"></input>
+                                     <!-- </div> -->
+                                     <div class="form-group" style="padding: 0 24px;">
+                                       <label for="inputDisc">概要</label>
+                                        <textarea name="description" class="form-control" id="inputDesc" rows="3" placeholder="例) 車通りが多く交通事故が発生しやすい"></textarea>
+                                     </div>
+
+                                     <div class="form-group" style="padding: 0 24px;">
+                                       <label for="genreSelect">ジャンル</label>
+                                       <select class="form-control" id="genreSelect" name="genre">
+                                         <option>車に注意</option>
+                                         <option>用水に注意</option>
+                                         <option>踏切注意</option>
+                                         <option>夜道注意</option>
+                                         <option>見通しが悪い</option>
+                                       </select>
+                                     </div>
+                                     <p class="help-block red">※ 『場所の名前』 の入力と地図上のクリックは必須です</p>
+                                     <p class="help-block red">　　この二つが入力されないと登録ボタンが押せません</p>
+                                    <button class="btn btn-primary pull-right disabled" id="new-place-btn" type="submit"><div id="sense_hover">この場所を登録する！</div></button>
+                                    <ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
                                   </form>
                               </div>
-
-                              <!-- <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>More Templates</h4></div>
-                                  <div class="panel-body">
-                                    <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Free @Bootply</a>
-                                    <div class="clearfix"></div>
-                                    There a load of new free Bootstrap 3 ready templates at Bootply. All of these templates are free and don't require extensive customization to the Bootstrap baseline.
-                                    <hr>
-                                    <ul class="list-unstyled"><li><a href="http://www.bootply.com/templates">Dashboard</a></li><li><a href="http://www.bootply.com/templates">Darkside</a></li><li><a href="http://www.bootply.com/templates">Greenfield</a></li></ul>
-                                  </div>
-                              </div> -->
-
-                              <div class="panel panel-default">
-                                <div class="panel-heading"><h4>What Is Bootstrap?</h4></div>
+<!-- 
+                              <div class="panel panel-danger" id="warning">
+                                <div class="panel-heading">
+                                  <h3 class="panel-title">未入力事項があります</h3>
+                                </div>
                                 <div class="panel-body">
-                                  Bootstrap is front end frameworkto build custom web applications that are fast, responsive &amp; intuitive. It consist of CSS and HTML for typography, forms, buttons, tables, grids, and navigation along with custom-built jQuery plug-ins and support for responsive layouts. With dozens of reusable components for navigation, pagination, labels, alerts etc..                          </div>
-                              </div>
-
+    　　　　　　　　　　　　　　　　　　　　　　　　　　
+  　　　　　　　　　　　　　　　　　　　　　　　　　</div>
+                              </div> -->
 
                           </div>
 
                           <!-- main col right -->
                           <div class="col-sm-7">
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Let's look up places &amp; Create new Location!!</h4></div>
+                                 <div class="panel-heading"> <h4 class="bold">追加する場所をクリック!</h4></div>
                                   <div class="panel-body">
-                                    <div id="gmap" style="width: 100%; height: 380px; border: 1px solid Gray;">
+                                    <div id="gmap" style="width: 100%; height: 400px; border: 1px solid Gray;">
                                   </div>
                                </div>
                                </div>
-
-<!--
-                               <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
-                                  <div class="panel-body">
-                                    <ul class="list-group">
-                                    <li class="list-group-item">Modals</li>
-                                    <li class="list-group-item">Sliders / Carousel</li>
-                                    <li class="list-group-item">Thumbnails</li>
-                                    </ul>
-                                  </div>
-                               </div> -->
-                            <!--
-                               <div class="panel panel-default">
-                                <div class="panel-thumbnail"><img src="/assets/example/bg_4.jpg" class="img-responsive"></div>
-                                <div class="panel-body">
-                                  <p class="lead">Social Good</p>
-                                  <p>1,200 Followers, 83 Posts</p>
-
-                                  <p>
-                                    <img src="https://lh6.googleusercontent.com/-5cTTMHjjnzs/AAAAAAAAAAI/AAAAAAAAAFk/vgza68M4p2s/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                    <img src="https://lh4.googleusercontent.com/-6aFMDiaLg5M/AAAAAAAAAAI/AAAAAAAABdM/XjnG8z60Ug0/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                    <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                  </p>
-                                </div>
-                              </div>
-                             -->
                           </div>
-                       </div><!--/row-->
+                       </div>
 
-<!--                         <div class="row">
-                          <div class="col-sm-6">
-                            <a href="#">Twitter</a> <small class="text-muted">|</small> <a href="#">Facebook</a> <small class="text-muted">|</small> <a href="#">Google+</a>
-                          </div>
-                        </div> -->
 
                         <div class="row" id="footer">
                           <div class="col-sm-6">
@@ -218,20 +179,10 @@
                           </div>
                           <div class="col-sm-6">
                             <p>
-                            <a href="#" class="pull-right">cCopyright 2013</a>
+                            <a href="#" class="pull-right">©Copyright 2013</a>
                             </p>
                           </div>
                         </div>
-
-                      <!-- <hr> -->
-
-<!--                       <h4 class="text-center">
-                      <a href="http://bootply.com/96266" target="ext">Download this Template @Bootply</a>
-                      </h4> -->
-
-                      <!-- <hr> -->
-
-
                     </div><!-- /col-9 -->
                 </div><!-- /padding -->
             </div>
@@ -261,7 +212,7 @@
           <div>
           <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
             <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
-      </div>  
+      </div>
       </div>
   </div>
   </div>
