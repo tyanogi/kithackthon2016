@@ -18,3 +18,31 @@ span:before {
           display: none;
       }
   }
+
+
+.icon-list {
+  max-width: 800px;
+}
+
+.return {
+  margin: 40px;
+}
+
+.icon-desc {
+    float: left;
+    /*width: 15%;*/
+    height: 90px;
+    padding: 15px;
+    padding-top: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #fff;
+}
+.desc {
+  display: block;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 14px;
+}

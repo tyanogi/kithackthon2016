@@ -192,6 +192,18 @@ $result = $inst->getAllPlaceinfo();
       <span>印刷プレビューで地図が正しく印刷されることを確認してから印刷することをお勧めします。</span>
     </div>
     <div id="printarea"><div id="gmap" style="width: 100%; height: 100%; border: 1px solid Gray;"></div></div>
-    <div　class="rm-print"><a href="./view.php"　class="rm-print">トップに戻る</a></div>
+    <div class="icon-list">
+      <ul class="list-inline">
+       <li class="icon-desc"><img src="./image/icons/1.png" width="30px" height="30px"><span class="desc">避難所</span></li>
+       <li class="icon-desc"><img src="./image/icons/2.png" width="30px" height="30px"><span class="desc">AED</span></li>
+       <li class="icon-desc"><img src="./image/icons/3.png" width="30px" height="30px"><span class="desc">110番の家</span></li>
+       <li class="icon-desc"><img src="./image/icons/4.png" width="30px" height="30px"><span class="desc">車に注意</span></li>
+       <li class="icon-desc"><img src="./image/icons/5.png" width="30px" height="30px"><span class="desc">用水に注意</span></li>
+       <li class="icon-desc"><img src="./image/icons/6.png" width="30px" height="30px"><span class="desc">踏切注意</span></li>
+       <li class="icon-desc"><img src="./image/icons/7.png" width="30px" height="30px"><span class="desc">夜道が暗い</span></li>
+       <li class="icon-desc"><img src="./image/icons/8.png" width="30px" height="30px"><span class="desc">見通しが悪い</span></li>
+     </ul>
+    </div>
+    <div　class="return"><a href="./view.php"　class="rm-print">トップに戻る</a></div>
   </body>
 </html>
