@@ -392,7 +392,7 @@ function deleteMarker__(x)
                           </div>
                         </div> -->
 
-                        <div class="row" id="footer">
+<!--                        <div class="row" id="footer">
                           <div class="col-sm-6">
 
                           </div>
@@ -402,7 +402,7 @@ function deleteMarker__(x)
                             </p>
                           </div>
                         </div>
-
+-->
                       <!-- <hr> -->
 
 <!--                       <h4 class="text-center">
